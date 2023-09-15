@@ -1,0 +1,8 @@
+/* ==========================================
+	Responsive Styles
+========================================== */
+@media all and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}

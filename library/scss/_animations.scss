@@ -1,0 +1,138 @@
+// Base Animations 
+
+.animate{
+    opacity: 0;
+    transition: all ease-in-out .3s;
+
+    &.animateUp{
+        padding-top: 100px;
+
+        &.slideUp{
+            opacity: 1;
+            padding-top: 0;
+        }
+    }
+
+    &.animateDown{
+        padding-bottom: 100px;
+
+        &.slideDown{
+            opacity: 1;
+            padding-bottom: 0;
+        }
+    }
+
+    &.animateLeft{
+        right: -25%;
+        position: relative;
+
+        &.slideLeft{
+            opacity: 1;
+            right: 0;
+            position: relative;
+        }
+    }
+
+    &.animateRight{
+        left: -25%;
+        position: relative;
+
+        &.slideRight{
+            opacity: 1;
+            left: 0;
+            position: relative;
+        }
+    }
+}
+
+
+/* ===== Checkmark Animation  ===== */
+
+:root {
+  --loader-size: 100px;
+  --check-height: calc(var(--loader-size)/2);
+  --check-width: calc(var(--check-height)/1.75);
+  --check-left: calc( var(--loader-size)/8 + var(--loader-size)/32 );
+  --green: #44b03a;
+}
+
+.circle-loader {
+  margin-bottom: var(--loader-size)/2;
+  border: 8px solid rgba(0, 0, 0, 0.2);
+  border-left-color: var(--green);
+  animation: loader-spin 800ms 1 linear;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 50%;
+  width: var(--loader-size);
+  height: var(--loader-size);
+}
+
+.load-complete {
+  -webkit-animation: none;
+  animation: none;
+  border-color: var(--green);
+  background:var(--green);
+  transition: border 120ms ease-out;
+}
+
+.checkmark {
+  display: none;
+  
+  &.draw:after {
+    animation-duration: 300ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-name: checkmark;
+    transform: scaleX(-1) rotate(135deg);
+  }
+  
+  &:after {
+    opacity: 1;
+    transform-origin: left top;
+    border-right: 15px solid white;
+    border-top: 15px solid white;
+    border-radius: 5px;
+    content: '';
+    top: 48px;
+    width: var(--check-width);
+    left: var(--check-left);
+    position: absolute;
+  }
+}
+
+
+/* ===== Keyframes ===== */
+
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  20% {
+    height: 0;
+    width: var(--check-width);
+    opacity: 1;
+  }
+  40% {
+    height: var(--check-height);
+    width: var(--check-width);
+    opacity: 1;
+  }
+  100% {
+    height: var(--check-height);
+    width: var(--check-width);
+    opacity: 1;
+  }
+}

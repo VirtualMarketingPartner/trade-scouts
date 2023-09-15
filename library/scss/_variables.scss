@@ -1,0 +1,43 @@
+/* ==========================================
+	Variables
+========================================== */
+
+:root {
+    // fonts
+    --sans: 'Poppins', 'Open Sans', sans-serif;
+    --handwriting: 'Permanent Marker', 'Poppins', 'Open Sans', sans-serif;
+    --icon: "Font Awesome 5 Pro";
+
+    // colors
+    --blue: #004e74;
+    --blue-dk: #2B6884;
+    --blue-lt: #CAE7F0;
+
+    --orange: #D67A49;
+    --orange-dk: #c7602a;
+    
+    --black: #143a55;
+    
+    --grey: #a3a3a3;
+    --grey-dk: #434343;
+    --grey-md: #6C6C6C;
+    --grey-lt: #ccc;
+
+    --off-white: #eef3f5;
+    --white: #fff;
+
+    --trans: transaprent;
+
+    --primary: var(--blue);
+    --primary-dk: var(--blue-dk);
+    --primary-lt: var(--blue-lt);
+    --secondary: var(--orange);
+    --secondary-dk: var(--orange-dk);
+
+    // breakpoints
+	--breakpoint-xs: 0;
+	--breakpoint-sm: 576px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 992px;
+	--breakpoint-xl: 1200px;
+}

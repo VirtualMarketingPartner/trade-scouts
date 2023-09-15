@@ -3,9 +3,53 @@
  * Setup Child Theme Styles
  */
 function trade_scouts_enqueue_styles() {
-	wp_enqueue_style( 'trade_scouts-style', get_stylesheet_directory_uri() . '/style.css', false, '1.0' );
+	wp_enqueue_script(
+		'bootstrap',
+		'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css',
+		array('jquery'),
+		'1',
+		'true' // load in the footer
+	);
+
+	wp_enqueue_script(
+		'bootstrap',
+		'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js',
+		array('jquery'),
+		'1',
+		'true' // load in the footer
+	);
+
+	wp_enqueue_script(
+		'trade_scouts-js',
+		get_stylesheet_directory_uri() . '/library/js/main.js', 
+		array('jquery'),
+		'1',
+		'true' // load in the footer
+	);
+
+	wp_enqueue_script(
+		'fontawesome',
+		'https://kit.fontawesome.com/09807403fd.js',
+		array('jquery'),
+		'3.5.1',
+		'true' // load in the footer
+	);
+
+	wp_enqueue_style(
+		'trade_scouts-style', 
+		get_stylesheet_directory_uri() . '/style.css', 
+		false, 
+		'1.0' 
+	);
+
+	wp_enqueue_style( 
+		'trade_scouts-child', 
+		get_stylesheet_directory_uri() . '/library/scss/main.css', 
+		false, 
+		'1.0' 
+	);
 }
-// add_action( 'wp_enqueue_scripts', 'trade_scouts_enqueue_styles', 20 );
+add_action( 'wp_enqueue_scripts', 'trade_scouts_enqueue_styles', 20 );
 
 
 /**

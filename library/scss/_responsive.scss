@@ -1,0 +1,52 @@
+/* ==========================================
+	Responsive Styles
+========================================== */
+
+
+  /////////////////////////////////
+ //  Mobile - Smallest screens  //
+/////////////////////////////////
+@media all and (max-width: 580px) {}
+
+
+
+  ////////////////////////
+ //  Mobile - Default  //
+////////////////////////
+@media all and (max-width: 768px) {}
+
+
+
+  ////////////////////////
+ //  Mobile - Tablets  //
+////////////////////////
+@media all and (min-width: 768px) {}
+
+
+
+  ////////////////////////
+ //  Mobile - Desktop  //
+////////////////////////
+@media all and (min-width: 992px) {}
+
+
+
+@media all and (min-width: 1049px){}
+
+
+
+  //////////////////////////////
+ //  Mobile - Large Screens  //
+//////////////////////////////
+@media all and (min-width: 1200px) {
+	.container{
+		max-width: 1200px;
+	}
+}
+
+
+
+  /////////////////////////////////////
+ //  Mobile - Really Large Screens  //
+/////////////////////////////////////
+@media all and (max-width: 1400px){}

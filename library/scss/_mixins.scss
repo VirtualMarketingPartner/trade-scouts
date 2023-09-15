@@ -1,0 +1,51 @@
+/* ==========================================
+	Mixins
+========================================== */
+
+@mixin center() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// Default Transition
+@mixin defaultTransition{
+	-webkit-transition: all ease-in-out .2s;
+	-moz-transition:all ease-in-out .2s;
+	transition:all ease-in-out .2s;
+}
+
+// Default Shadow
+@mixin defaultShadow {
+    -webkit-box-shadow: 0 0 20px rgba(0,0,0,.10);
+    -moz-box-shadow: 0 0 20px rgba(0,0,0,.10);
+    box-shadow: 0 0 20px rgba(0,0,0,.10);
+}
+
+// Box Shadow
+@mixin box-shadow($h, $v, $blur, $spread, $color) {
+    -webkit-box-shadow:$h $v $blur $spread $color;
+    -moz-box-shadow: $h $v $blur $spread $color;
+    box-shadow: $h $v $blur $spread $color;
+}
+
+// Border Radius
+@mixin border-radius($radius) {
+	-webkit-border-radius:$radius;
+	-moz-border-radius:$radius;
+	border-radius:$radius;
+}
+
+// Transition
+@mixin transition($all, $ease, $time) {
+	-webkit-transition:$all $ease $time;
+	-moz-transition:$all $ease $time;
+	transition:$all $ease $time;
+}
+
+// Opacity
+@mixin opacity($ie, $decimal){
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=$ie)"; // IE8
+	filter: alpha(opacity=$ie); // IE 5-7
+	opacity: $decimal;
+}
